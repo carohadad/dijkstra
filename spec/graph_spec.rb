@@ -89,4 +89,24 @@ RSpec.describe Graph do
 
     expect(graph_5.find_shortest_path("A", "E")).to eq(5)
   end
+
+   it "shortest path when decission needs to be changed at the end" do
+    graph_6 = Graph.new(6)
+    graph_6.add_node("A")
+    graph_6.add_node("B")
+    graph_6.add_node("C")
+    graph_6.add_node("D")
+    graph_6.add_node("E")
+    graph_6.add_node("F")
+
+    graph_6.add_edge("A", "B", 1)
+    graph_6.add_edge("B", "C", 1)
+    graph_6.add_edge("B", "D", 2)
+    graph_6.add_edge("D", "E", 2)
+    graph_6.add_edge("C", "E", 5)
+    graph_6.add_edge("E", "F", 100)
+    graph_6.add_edge("D", "F", 5)
+
+    expect(graph_6.find_shortest_path("A", "F")).to eq(8)
+  end
 end

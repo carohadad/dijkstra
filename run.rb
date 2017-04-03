@@ -36,7 +36,9 @@ from = gets.chomp
 puts "Find shortest path to:"
 to = gets.chomp
 
-graph.find_shortest_path(from, to)
+value = graph.find_shortest_path(from, to)
+
+puts "Shortest path weight is: #{value}"
 
 
 
