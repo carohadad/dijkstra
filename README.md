@@ -1,3 +1,6 @@
+This is a console base interactive aplication to calculate the shortest paths between nodes in a graph using dijkstra's algorithm.
+
+
 To install
 
 `bundle install`
